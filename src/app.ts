@@ -12,6 +12,8 @@ import swaggerUI from "swagger-ui-express";
 import swaggerDocument  from "../swagger/swagger.json";
 export class App {
   app: Application;
+  
+  public PORT =  process.env.PORT || 5300;
 
   constructor() 
   {
@@ -20,10 +22,9 @@ export class App {
     this.middlewares();
     this.routes();
   }
-  private port?: number | string
-  
+
   public settings() {
-    this.app.set("port", this.port || process.env.PORT || 5300);
+    this.app.set("port", this.PORT );
     this.app.set("access-token", config.TOKEN_SECRET);
     this.app.set("dev", process.env.NODE_ENV || "development");
     this.app.set("prod", process.env.NODE_ENV || "production");
@@ -43,7 +44,7 @@ export class App {
   }
 
   async listen(): Promise<void> {
-    await this.app.listen(this.app.get("port"));
-    console.log("Server on port", this.app.get("port"));
+    await this.app.listen(this.PORT);
+    console.log("Server on port", this.PORT);
   }
 }

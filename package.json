@@ -8,7 +8,8 @@
     }
   },
   "engines": {
-    "node": "14.x"
+    "node": "12.18.3",
+    "npm": "6.14.6"
   },
   "description": "API Music",
   "main": "dist/server.js",
@@ -17,7 +18,7 @@
     "prod": "set NODE_ENV=production && nodemon https://appmusicenjoy.herokuapp.com/",
     "start": "node dist/server.js",
     "slint": "eslint --ext .ts . --fix",
-    "build": "tsc -p .",
+    "build": "set NODE_ENV=production && nodemon dist/server.js",
     "mysql": "nodemon src/database.ts"
   },
   "devDependencies": {
@@ -55,7 +56,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moebious/appmusic.git"
+    "url": "git+https://github.com/jessicaorozco/appmusic"
   },
   "keywords": [
     "app",
@@ -65,7 +66,7 @@
   "author": "Kevin Vicent",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/moebious/appmusic/issues"
+    "url": "https://github.com/jessicaorozco/appmusic/issues"
   },
-  "homepage": "https://github.com/moebious/appmusic#readme"
+  "homepage": "https://github.com/jessicaorozco/appmusic#readme"
 }
