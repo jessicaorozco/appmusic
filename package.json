@@ -15,10 +15,9 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "set NODE_ENV=development && nodemon src/index.ts",
-    "prod": "set NODE_ENV=production && nodemon https://appmusicenjoy.herokuapp.com/",
-    "start": "node dist/server.js",
+    "start": "set NODE_ENV=production && nodemon src/index.ts",
     "slint": "eslint --ext .ts . --fix",
-    "build": "set NODE_ENV=production && nodemon dist/server.js",
+    "build": "set NODE_ENV=production && nodemon src/index.ts",
     "mysql": "nodemon src/database.ts"
   },
   "devDependencies": {
@@ -63,7 +62,7 @@
     "music",
     "API"
   ],
-  "author": "Kevin Vicent",
+  "author": "Jessica Orozco",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jessicaorozco/appmusic/issues"
