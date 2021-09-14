@@ -17,8 +17,9 @@
     "dev": "set NODE_ENV=development && nodemon src/index.ts",
     "start": "set NODE_ENV=production && nodemon src/index.ts --prod",
     "slint": "eslint --ext .ts . --fix",
-    "build": "webpack",
-    "mysql": "nodemon src/database.ts"
+    "build": "tsc -p .",
+    "mysql": "nodemon src/database.ts",
+    "heroku-postbuild": "echo Skip build on Heroku"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
@@ -67,5 +68,6 @@
   "bugs": {
     "url": "https://github.com/jessicaorozco/appmusic/issues"
   },
-  "homepage": "https://github.com/jessicaorozco/appmusic#readme"
+  "homepage": "https://github.com/jessicaorozco/appmusic#readme",
+  "heroku-run-build-script": true
 }
