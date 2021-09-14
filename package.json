@@ -15,9 +15,9 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "set NODE_ENV=development && nodemon src/index.ts",
-    "start": "set NODE_ENV=production && nodemon src/index.ts",
+    "start": "set NODE_ENV=production && nodemon src/index.ts --prod",
     "slint": "eslint --ext .ts . --fix",
-    "build": "set NODE_ENV=production && nodemon src/index.ts",
+    "build": "webpack",
     "mysql": "nodemon src/database.ts"
   },
   "devDependencies": {
